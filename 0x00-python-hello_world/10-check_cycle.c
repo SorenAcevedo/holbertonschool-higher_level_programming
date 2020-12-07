@@ -9,7 +9,10 @@ int check_cycle(listint_t *list)
 {
 	listint_t *liebre, *tortuga;
 
-	liebre = list->next;
+	if (list->next)
+		liebre = list->next;
+	else
+		return (0);
 	tortuga = list;
 
 	while (liebre && tortuga && liebre->next)
