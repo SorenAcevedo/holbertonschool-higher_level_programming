@@ -7,7 +7,7 @@
  */
 int check_cycle(listint_t *list)
 {
-	listint_t liebre, tortuga;
+	listint_t *liebre, *tortuga;
 
 	liebre = list->next;
 	tortuga = list;
@@ -19,5 +19,5 @@ int check_cycle(listint_t *list)
 		liebre = liebre->next->next;
 		tortuga = tortuga->next;
 	}
-	return (0)
+	return (0);
 }
