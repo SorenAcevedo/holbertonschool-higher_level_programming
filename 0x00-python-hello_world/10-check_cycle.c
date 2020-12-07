@@ -12,14 +12,12 @@ int check_cycle(listint_t *list)
 	liebre = list->next;
 	tortuga = list;
 
-	while (liebre && tortuga && liebre->next)
+	for (;liebre && tortuga && liebre->next;)
 	{
 		if (liebre == tortuga)
 			return (1);
 		liebre = liebre->next->next;
 		tortuga = tortuga->next;
-		if (liebre == tortuga)
-			return (1);
 	}
 	return (0);
 }
