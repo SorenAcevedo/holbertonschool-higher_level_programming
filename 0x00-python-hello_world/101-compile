@@ -1,0 +1,2 @@
+#!/bin/bash
+python3 -c "import sys; f = open('$PYFILE', 'r'); contenido = f.read(); f2 = open('$PYFILE' + 'c', 'w'); f2.write(contenido); f.close(); f2.close()"
