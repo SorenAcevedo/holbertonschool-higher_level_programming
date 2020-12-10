@@ -1,0 +1,26 @@
+#!/usr/bin/python3
+if __name__ == "__main__":
+    from calculator_1 import add, sub, mul, div
+    from sys import argv
+
+    opr = "-+*/"
+
+    if len(argv) == 4:
+        if argv[2] not in opr:
+            print("Unknown operator. Available operators: +, -, * and /")
+            exit(1)
+        a = int(argv[1])
+        b = int(argv[3])
+
+        if argv[2] == "+":
+            print("{} + {} = {}".format(a, b, add(a, b)))
+        elif argv[2] == "-":
+            print("{} - {} = {}".format(a, b, sub(a, b)))
+        elif argv[2] == "*":
+            print("{} * {} = {}".format(a, b, mul(a, b)))
+        else:
+            print("{} / {} = {}".format(a, b, div(a, b)))
+        exit(0)
+    else:
+        print("Usage: ./100-my_calculator.py <a> <operator> <b>")
+        exit(1)
