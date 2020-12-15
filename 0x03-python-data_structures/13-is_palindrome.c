@@ -30,7 +30,6 @@ int is_palindrome(listint_t **head)
 	int *arr;
 
 	i = len_list(head);
-	printf("%d\n",i);
 	if (i == 0 || i == 1)
 		return (1);
 	arr = malloc(sizeof(int) * i);
