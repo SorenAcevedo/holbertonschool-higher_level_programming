@@ -9,7 +9,7 @@ int is_palindrome(listint_t **head)
 {
 	listint_t *temp = *head;
 	int i, j = 0, k;
-	int arr[24];
+	int arr[5000];
 
 	if (!*head)
 		return (1);
