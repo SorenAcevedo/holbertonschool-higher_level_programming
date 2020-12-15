@@ -1,4 +1,23 @@
 #include "lists.h"
+
+/**
+ * len_list - calculate len of list
+ * @head: head
+ * Return: len
+ */
+int len_list(listint_t **head)
+{
+	listint_t *temp = *head;
+	int i = 0;
+
+	while (temp)
+	{
+		temp = temp->next;
+		i++;
+	}
+	return (i);
+}
+
 /**
  * is_palindrome - check if a list is palindrome
  * @head: pointer to head
@@ -6,22 +25,15 @@
  */
 int is_palindrome(listint_t **head)
 {
-	listint_t *temp;
+	listint_t *temp = *head;
 	int i = 0, j = 0;
 	int *arr;
 
-	temp = *head;
-
-	while (temp)
-	{
-		temp = temp->next;
-		i++;
-	}
-	temp = *head;
+	i = len_list(head);
 
 	if (i == 0 || i == 1)
 		return (1);
-	arr = malloc(sizeof(int) * i);
+	arr = malloc(sizeof(int) * (i - 1));
 
 	while (temp)
 	{
@@ -30,7 +42,7 @@ int is_palindrome(listint_t **head)
 		j++;
 	}
 	j--;
-	for (i = 0; arr[i + 1]; i++, j--)
+	for (i = 0; j >= 0; i++, j--)
 	{
 		if (arr[i] != arr[j])
 		{
