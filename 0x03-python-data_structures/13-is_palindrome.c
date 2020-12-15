@@ -29,7 +29,9 @@ int is_palindrome(listint_t **head)
 		temp = temp->next;
 		j++;
 	}
-	for (i = 0; i < j / 2; i++, j--)
+	j--;
+	printf("Este es j %d\n", j);
+	for (i = 0; i <= ((j / 2) + 1); i++, j--)
 	{
 		if (arr[i] != arr[j])
 		{
