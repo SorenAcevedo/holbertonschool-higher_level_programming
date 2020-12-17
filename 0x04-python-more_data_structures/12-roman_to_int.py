@@ -7,7 +7,7 @@ def roman_to_int(roman_string):
         for i in range(len(roman_string)):
             if i < len(roman_string) - 1:
                 if rs.get(roman_string[i]) < rs.get(roman_string[i + 1]):
-                    num += rs.get(roman_string[i + 1]) - 1
+                    num += rs.get(roman_string[i + 1]) - (1 * rs.get(roman_string[i]))
                     if i == len(roman_string) - 2:
                         break
                 else:
