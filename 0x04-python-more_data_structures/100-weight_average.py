@@ -7,4 +7,6 @@ def mul(t=()):
 
 
 def weight_average(my_list=[]):
-    return sum([mul(i) for i in my_list]) / sum([i[1] for i in my_list])
+    if my_list:
+        return sum([mul(i) for i in my_list]) / sum([i[1] for i in my_list])
+    return 0
