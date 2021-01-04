@@ -10,7 +10,7 @@ def list_division(my_list_1, my_list_2, list_length):
         except TypeError:
             print("wrong type")
         except IndexError:
-            print("out of range")    
+            print("out of range")
         finally:
             new_list.append(c)
     return new_list
