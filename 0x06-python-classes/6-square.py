@@ -71,7 +71,7 @@ class Square:
 
     def my_print(self):
         """ Print square method """
-        if self.__size < 0:
+        if self.__size == 0:
             print()
             return
 
