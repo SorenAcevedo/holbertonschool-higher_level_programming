@@ -65,7 +65,7 @@ class Square:
             value (int): new position
         """
 
-        if (type(position) != tuple or
+        if (type(value) != tuple or
                 len(value) != 2 or
                 type(value[0]) != int or
                 type(value[1]) != int or
