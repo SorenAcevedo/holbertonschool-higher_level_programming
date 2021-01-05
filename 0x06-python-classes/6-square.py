@@ -13,22 +13,10 @@ class Square:
             position (int tuple):
         Attributes:
             __size (int): Size of square.
+            __position (int tuple): int tuple.
         """
-
-        if type(size) != int:
-            raise TypeError('size must be an integer')
-        elif size < 0:
-            raise ValueError('size must be >= 0')
-        self.__size = size
-
-        if (type(position) != tuple or
-                len(position) != 2 or
-                type(position[0]) != int or
-                type(position[1]) != int or
-                position[0] < 0 or
-                position[1] < 0):
-            raise TypeError('position must be a tuple of 2 positive integers')
-        self.__position = position
+        self.size = size
+        self.position = position
 
     @property
     def size(self):
@@ -62,7 +50,7 @@ class Square:
     def position(self, value):
         """ Method to set new position
         Args:
-            value (int): new position
+            value (tuple): new position
         """
 
         if (type(value) != tuple or
