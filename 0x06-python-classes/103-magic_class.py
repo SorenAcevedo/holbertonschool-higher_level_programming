@@ -2,6 +2,7 @@
 """
 Bytecode Class
 """
+import math
 
 
 class MagicClass():
@@ -20,12 +21,10 @@ class MagicClass():
 
     def area(self):
         """ Area method """
-        from math import pi
 
-        return pi * self.__radius ** 2
+        return math.pi * self.__radius ** 2
 
     def circumference(self):
         """ Circumference method """
-        from math import pi
 
-        return 2 * pi * self.__radius
+        return 2 * math.pi * self.__radius
