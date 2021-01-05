@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""
+This module have de square Class
+"""
 
 
 class Square:
