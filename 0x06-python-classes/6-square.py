@@ -58,7 +58,7 @@ class Square:
 
         return self.__position
 
-    @size.setter
+    @position.setter
     def position(self, value):
         """ Method to set new position
         Args:
