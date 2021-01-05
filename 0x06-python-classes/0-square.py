@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 
+
 class Square:
-    """
-    This is an empty class using pass
-    """
+    """ This is an empty class using pass """
     pass
