@@ -1,0 +1,44 @@
+The ``Say my Name`` module
+======================
+
+-------------------
+
+This is a text file in reStructuredText format. First import
+say_my_name from the Say my name module
+
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
+
+Now use it:
+
+    Normal
+
+    >>> say_my_name("John", "Smith")
+    My name is John Smith
+
+    >>> say_my_name("Walter", "White")
+    My name is Walter White
+
+    Only name
+
+    >>> say_my_name("Bob")
+    My name is Bob 
+
+    Wrong type 1
+
+    >>> say_my_name(1, "White")
+    Traceback (most recent call last):
+    TypeError: first_name must be a string
+
+    Wrong type 2
+
+    >>> say_my_name("John", 2)
+    Traceback (most recent call last):
+    TypeError: last_name must be a string
+
+--------------------
+PEP8 STYLE
+--------------------
+
+    >>> import os
+    >>> os.popen("pep8 3-say_my_name.py").read()
+    ''

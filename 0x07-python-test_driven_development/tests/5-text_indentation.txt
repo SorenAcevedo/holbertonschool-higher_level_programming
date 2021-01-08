@@ -1,0 +1,70 @@
+The ``Text indentation`` module
+======================
+
+-------------------
+
+This is a text file in reStructuredText format. First import
+text_indentation from the Text indentation module
+
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Now use it:
+
+    Normal
+
+    >>> text_indentation("""Consectetur. Quonam modo: commovere?""")
+    Consectetur.
+    <BLANKLINE>
+    Quonam modo:
+    <BLANKLINE>
+    commovere?
+
+    >>> text_indentation(5)
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
+    Init with space
+
+    >>> text_indentation("""    Consectetur. Quonam modo: commovere?""")
+    Consectetur.
+    <BLANKLINE>
+    Quonam modo:
+    <BLANKLINE>
+    commovere?
+
+    More than one space after indentation
+
+    >>> text_indentation("""Consectetur.        Quonam modo:         commovere?""")
+    Consectetur.
+    <BLANKLINE>
+    Quonam modo:
+    <BLANKLINE>
+    commovere?
+
+    Without spaces
+
+    >>> text_indentation("""Consectetur.Quonam modo:commovere?""")
+    Consectetur.
+    <BLANKLINE>
+    Quonam modo:
+    <BLANKLINE>
+    commovere?
+
+    Two separators
+
+    >>> text_indentation("""Consectetur.. Quonam modo: commovere?""")
+    Consectetur.
+    <BLANKLINE>
+    .
+    <BLANKLINE>
+    Quonam modo:
+    <BLANKLINE>
+    commovere?
+
+--------------------
+PEP8 STYLE
+--------------------
+
+    >>> import os
+    >>> os.popen("pep8 5-text_indentation.py").read()
+    ''

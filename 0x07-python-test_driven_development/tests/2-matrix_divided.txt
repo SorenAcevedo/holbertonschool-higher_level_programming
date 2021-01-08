@@ -1,0 +1,66 @@
+The ``Matrix division`` module
+======================
+
+-------------------
+
+This is a text file in reStructuredText format. First import
+matrix_divided from the Matrix division module
+
+    >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+Now use it:
+
+    Normal
+
+    >>> matrix_divided([[1, 2, 3], [4, 5, 6]], 3)
+    [[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
+
+    Empty Matrix
+
+    >>> matrix_divided([[]], 3)
+    [[]]
+
+    Differents row lengths
+
+    >>> matrix_divided([[1, 2], [4, 5, 6]], 8) 
+    Traceback (most recent call last):
+    TypeError: Each row of the matrix must have the same size
+
+    Type not int or float
+
+    >>> matrix_divided([[1, 2], ["Hola4", 5, 6]], 5)
+    Traceback (most recent call last):
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+    Matrix Type not list
+
+    >>> matrix_divided(["Hola", ["Hola4", 5, 6]], 5)
+    Traceback (most recent call last):
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+    Div = 0
+
+    >>> matrix_divided([[1, 2, 3], [4, 5, 6]], 0)
+    Traceback (most recent call last):
+    ZeroDivisionError: division by zero
+
+    Div type =! int float
+
+    >>> matrix_divided([[1, 2, 3], [4, 5, 6]], 'h')
+    Traceback (most recent call last):
+    TypeError: div must be a number
+
+    >>> matrix_divided([[1, 2, 3], [4, 5, 6]])
+    Traceback (most recent call last):
+    TypeError: matrix_divided() missing 1 required positional argument: 'div'
+    >>> matrix_divided()
+    Traceback (most recent call last):
+    TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
+
+--------------------
+PEP8 STYLE
+--------------------
+
+    >>> import os
+    >>> os.popen("pep8 2-matrix_divided.py").read()
+    ''

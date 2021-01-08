@@ -1,0 +1,41 @@
+The ``integers addition`` module
+======================
+
+-------------------
+
+This is a text file in reStructuredText format. First import
+add_integer from the Integers addition module
+
+    >>> add_integer = __import__('0-add_integer').add_integer
+
+Now use it:
+
+    >>> add_integer(1, 2)
+    3
+    >>> add_integer(100, -2)
+    98
+    >>> add_integer(2)
+    100
+    >>> add_integer(100.3, -2)
+    98
+    >>> add_integer(100.3)
+    198
+    >>> add_integer(100.3, 50.5)
+    150
+    >>> add_integer()
+    Traceback (most recent call last):
+    TypeError: add_integer() missing 1 required positional argument: 'a'
+    >>> add_integer('a', 5)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+    >>> add_integer(12, 'b')
+    Traceback (most recent call last):
+    TypeError: b must be an integer
+
+--------------------
+PEP8 STYLE
+--------------------
+
+    >>> import os
+    >>> os.popen("pep8 0-add_integer.py").read()
+    ''

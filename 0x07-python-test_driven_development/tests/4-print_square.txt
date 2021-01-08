@@ -1,0 +1,57 @@
+The ``Print Square`` module
+======================
+
+-------------------
+
+This is a text file in reStructuredText format. First import
+print_square from the Print Square module
+
+    >>> print_square = __import__('4-print_square').print_square
+
+Now use it:
+
+    Normal
+
+    >>> print_square(4)
+    ####
+    ####
+    ####
+    ####
+
+    >>> print_square(10)
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+
+    >>> print_square(0)
+
+
+    >>> print_square(1)
+    #
+
+    Negative size
+
+    >>> print_square(-1)
+    Traceback (most recent call last):
+    ValueError: size must be >= 0
+
+    Wrong type
+
+    >>> print_square(-1.0)
+    Traceback (most recent call last):
+    TypeError: size must be an integer
+
+--------------------
+PEP8 STYLE
+--------------------
+
+    >>> import os
+    >>> os.popen("pep8 4-print_square.py").read()
+    ''
