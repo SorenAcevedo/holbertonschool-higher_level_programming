@@ -31,3 +31,6 @@ def text_indentation(text):
         else:
             print("{}".format(text[i]), end="")
             i += 1
+
+    if text[i - 1] in separadores and i > 0:
+        print("\n")

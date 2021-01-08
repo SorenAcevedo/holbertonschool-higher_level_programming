@@ -18,6 +18,12 @@ Now use it:
     Quonam modo:
     <BLANKLINE>
     commovere?
+    <BLANKLINE>
+
+    String without separators
+
+    >>> text_indentation("""Consectetur""")
+    Consectetur
 
     >>> text_indentation(5)
     Traceback (most recent call last):
@@ -31,6 +37,7 @@ Now use it:
     Quonam modo:
     <BLANKLINE>
     commovere?
+    <BLANKLINE>
 
     More than one space after indentation
 
@@ -40,6 +47,7 @@ Now use it:
     Quonam modo:
     <BLANKLINE>
     commovere?
+    <BLANKLINE>
 
     Without spaces
 
@@ -49,6 +57,7 @@ Now use it:
     Quonam modo:
     <BLANKLINE>
     commovere?
+    <BLANKLINE>
 
     Two separators
 
@@ -60,6 +69,19 @@ Now use it:
     Quonam modo:
     <BLANKLINE>
     commovere?
+    <BLANKLINE>
+
+    Final Point
+
+    >>> text_indentation("""Consectetur.Quonam modo:commovere?.""")
+    Consectetur.
+    <BLANKLINE>
+    Quonam modo:
+    <BLANKLINE>
+    commovere?
+    <BLANKLINE>
+    .
+    <BLANKLINE>
 
 --------------------
 PEP8 STYLE
