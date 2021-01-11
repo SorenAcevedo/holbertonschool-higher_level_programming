@@ -5,5 +5,5 @@ This module have de Rectangle Class
 
 
 class Rectangle:
-    """ Empty class """i
+    """ Empty class """
     pass
