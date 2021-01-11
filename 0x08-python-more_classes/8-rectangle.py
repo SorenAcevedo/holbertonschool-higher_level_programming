@@ -43,6 +43,17 @@ class Rectangle:
             raise ValueError('width must be >= 0')
         self.__width = value
 
+    @staticmethod
+    def bigger_or_equal(rect_1, rect_2):
+        """ Method Bigger or Equal"""
+        if type(rect_1) != Rectangle:
+            raise TypeError('rect_1 must be an instance of Rectangle')
+        if type(rect_1) != Rectangle:
+            raise TypeError('rect_1 must be an instance of Rectangle')
+        if rect_1.area() < rect_2.area():
+            return rect_2
+        return rect_1
+
     def area(self):
         """ Method to obtain area """
         return self.__width * self.__height
