@@ -56,6 +56,7 @@ class Rectangle:
 
     @classmethod
     def square(cls, size=0):
+        """ Class method to create rectangle-square """
         return cls(size, size)
 
     def area(self):
