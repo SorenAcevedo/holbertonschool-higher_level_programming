@@ -54,6 +54,10 @@ class Rectangle:
             return rect_2
         return rect_1
 
+    @classmethod
+    def square(cls, size=0):
+        return cls(size, size)
+
     def area(self):
         """ Method to obtain area """
         return self.__width * self.__height
