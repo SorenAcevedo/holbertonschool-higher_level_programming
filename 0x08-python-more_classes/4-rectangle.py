@@ -56,3 +56,8 @@ class Rectangle:
         if self.__height == 0 or self.__width == 0:
             return ""
         return "".join([('#' * self.__width) + '\n' for i in range(l)])[:-1]
+
+    def __repr__(self):
+        """ Method to represent """
+        l = self.__height
+        return "Rectangle(" + str(self.__width) + ', ' + str(l) + ')'
