@@ -7,8 +7,8 @@ class MyInt(int):
 
     def __eq__(self, value):
         """ equivalent not is equivalent """
-        return self.real = value
+        return super().__ne__(value)
 
     def __ne__(self, value):
         """ different not is different """
-        return self.real == value
+        return super().__eq__(value)
