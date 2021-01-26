@@ -57,5 +57,5 @@ class Base():
                 r = fp.read()
                 l = cls.from_json_string(r)
                 return [cls.create(**i) for i in l]
-        except:
+        except FileNotFoundError:
             return []

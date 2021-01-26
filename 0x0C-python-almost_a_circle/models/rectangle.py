@@ -78,8 +78,8 @@ class Rectangle(Base):
         h = self.height
         w = self.width
         x = self.x
-        print("{}".format('\n' * self.y), end="")
-        print("".join([' ' * x + '#' * w + '\n' for i in range(h)])[:-1])
+        s = "{}".format('\n' * self.y)
+        print(s + "".join([' ' * x + '#' * w + '\n' for i in range(h)])[:-1])
 
     def update(self, *args, **kwargs):
         """ update method """
