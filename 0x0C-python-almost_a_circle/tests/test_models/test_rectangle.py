@@ -9,12 +9,12 @@ class TestRectangleClass(unittest.TestCase):
     """ Tests """
     def test_rectangle_02(self):
         """ Call class with id none """
-        r0 = Rectangle(10, 2)
+        r0 = Rectangle(10, 2, 0, 0, 1)
         self.assertEqual(r0.id, 1)
         self.assertEqual(r0.width, 10)
         self.assertEqual(r0.height, 2)
 
-        r1 = Rectangle(2, 10)
+        r1 = Rectangle(2, 10, 0, 0, 2)
         self.assertEqual(r1.id, 2)
         self.assertEqual(r1.width, 2)
         self.assertEqual(r1.height, 10)
