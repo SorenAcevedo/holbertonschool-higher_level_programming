@@ -27,7 +27,7 @@ class Base():
         """ From json method """
         if json_string:
             return json.loads(json_string)
-        return "[]"
+        return []
 
     @classmethod
     def save_to_file(cls, list_objs):
