@@ -1,7 +1,7 @@
 #!/usr/bin/node
 const first = process.argv[2];
 let i;
-if (isNaN(parseInt(first)) || first === undefined) {
+if (isNaN(first)) {
   console.log('Missing number of occurrences');
 } else {
   for (i = 0; i < first; i++) {
