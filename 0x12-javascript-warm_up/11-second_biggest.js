@@ -7,7 +7,6 @@ if (len === 2) {
 } else {
   for (let i = 2; i < len; i++) {
     if (process.argv[i] > second && process.argv[i] < max) {
-      console.log(second);
       second = process.argv[i];
     }
   }
