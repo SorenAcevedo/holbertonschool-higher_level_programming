@@ -1,14 +1,8 @@
 #!/usr/bin/node
 const len = process.argv.length;
-const max = Math.max(...process.argv.slice(2, len));
-let second = Math.min(...process.argv.slice(2, len));
+const arr = process.argv.slice(2, len).sort();
 if (len <= 3) {
   console.log(0);
 } else {
-  for (let i = 2; i < len; i++) {
-    if (process.argv[i] >= second && process.argv[i] < max) {
-      second = process.argv[i];
-    }
-  }
-  console.log(parseInt(second));
+  console.log(arr[len - 4]);
 }
