@@ -10,5 +10,5 @@ if (len <= 3) {
       second = process.argv[i];
     }
   }
-  console.log(second);
+  console.log(parseInt(second));
 }
