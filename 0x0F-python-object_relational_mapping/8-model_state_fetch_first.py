@@ -18,8 +18,7 @@ if __name__ == "__main__":
     Session = sessionmaker(engine)
     session = Session()
     states = session.query(State).order_by(State.id).first()
-
     if (states == []):
         print('Nothing')
     else:
-        print('{}: {}'.format(states[0].id, states[0].name))
+        print('{}: {}'.format(states.id, states.name))
