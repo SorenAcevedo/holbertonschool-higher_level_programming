@@ -18,7 +18,6 @@ if __name__ == "__main__":
     Session = sessionmaker(engine)
     session = Session()
     states = session.query(State).order_by(State.id)
-    states.all()
 
     if (states == []):
         print('Nothing')
