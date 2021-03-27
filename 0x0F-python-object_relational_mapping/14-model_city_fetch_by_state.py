@@ -21,6 +21,6 @@ if __name__ == "__main__":
     session = Session()
 
     sts_cts = session.query(State, City).filter(
-        State.id == City.state_id).order_by(City.id).all()
+        State.id == City.state_id).order_by(City.id)
     for s, c in sts_cts:
         print("{}: ({}) {}".format(s.name, c.id, c.name))
