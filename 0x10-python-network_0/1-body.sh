@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 # Script that sends a get Http request
 # and displays the body
-curl "$1"
+curl -sL "$1"

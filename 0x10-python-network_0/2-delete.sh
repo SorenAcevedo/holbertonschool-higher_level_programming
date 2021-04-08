@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 # Script that sends a delete Http request
 # and displays the body
-curl "$1" -X DELETE
+curl -sL "$1" -X DELETE
