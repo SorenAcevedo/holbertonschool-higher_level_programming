@@ -9,5 +9,5 @@ if __name__ == "__main__":
         with urllib.request.urlopen(sys.argv[1]) as response:
             print(response.read().decode('ascii'))
 
-    except urllib.error.URLError as e:
+    except urllib.error.HTTPError as e:
         print('Error Code: {}'.format(e.code))
