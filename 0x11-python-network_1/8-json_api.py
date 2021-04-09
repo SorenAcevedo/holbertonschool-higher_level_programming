@@ -4,9 +4,9 @@ import requests
 import sys
 
 if __name__ == "__main__":
-    values = {'p': ''}
+    values = {'q': ''}
     if len(sys.argv) == 2:
-        values['p'] = sys.argv[1]
+        values['q'] = sys.argv[1]
     url = 'http://0.0.0.0:5000/search_user'
     r = requests.post(url, data=values)
     print(r.headers)
